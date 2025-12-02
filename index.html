@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyen Minh - Web Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Full-stack web developer. Building performant, clean, and user-centric web applications.">
+</head>
+<body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Header (Sticky) -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo">NM</a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-btn">Hire Me</a>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <!-- SVG Avatar Placeholder -->
+                    <div class="avatar">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#7C5CFF;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#2FE6C5;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="50" cy="50" r="50" fill="url(#avatarGrad)" opacity="0.1"/>
+                            <circle cx="50" cy="35" r="15" fill="#7C5CFF"/>
+                            <ellipse cx="50" cy="70" rx="25" ry="20" fill="#2FE6C5" opacity="0.7"/>
+                        </svg>
+                    </div>
+
+                    <h1 class="hero-headline">
+                        Hi, I'm <span class="gradient-text">Nguyen Minh</span><br>
+                        Web Developer
+                    </h1>
+
+                    <p class="hero-subheadline">
+                        Building fast, clean, and user-centric web applications. <br>
+                        Specialized in React, Next.js, and full-stack development.
+                    </p>
+
+                    <div class="hero-ctas">
+                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                        <a href="#projects" class="btn btn-secondary">View My Work</a>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:hello@example.com" aria-label="Email">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                <path d="m22 7-10 5L2 7"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Tech Stack Pill -->
+                    <div class="tech-pill">
+                        <span class="tech-label">Tech Stack:</span>
+                        <div class="tech-tags">
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">Next.js</span>
+                            <span class="tech-badge">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-decoration"></div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <p class="about-text">
+                    I'm a passionate full-stack developer with 4+ years of experience building scalable web applications.
+                    I love working at the intersection of design and code, creating intuitive interfaces backed by robust architecture.
+                    When I'm not coding, I'm exploring new technologies and contributing to open-source projects.
+                </p>
+
+                <div class="highlight-cards">
+                    <div class="highlight-card reveal">
+                        <div class="card-icon">⚡</div>
+                        <h3>Performance</h3>
+                        <p>Optimized for speed. Web Vitals matter.</p>
+                    </div>
+                    <div class="highlight-card reveal">
+                        <div class="card-icon">🎨</div>
+                        <h3>UI/UX Design</h3>
+                        <p>Clean interfaces, thoughtful interactions.</p>
+                    </div>
+                    <div class="highlight-card reveal">
+                        <div class="card-icon">🤝</div>
+                        <h3>Collaboration</h3>
+                        <p>Works great with designers and product teams.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills" id="skills">
+            <div class="container">
+                <h2>Skills & Expertise</h2>
+
+                <div class="skills-grid">
+                    <!-- Languages -->
+                    <div class="skill-group reveal">
+                        <h3>Languages</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span class="skill-name">JavaScript</span>
+                                <div class="proficiency-bar">
+                                    <div class="proficiency-fill" style="width: 95%"></div>
+                                </div>
+                                <span class="proficiency-label">Strong</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">TypeScript</span>
+                                <div class="proficiency-bar">
+                                    <div class="proficiency-fill" style="width: 85%"></div>
+                                </div>
+                                <span class="proficiency-label">Strong</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">HTML & CSS</span>
+                                <div class="proficiency-bar">
+                                    <div class="proficiency-fill" style="width: 95%"></div>
+                                </div>
+                                <span class="proficiency-label">Strong</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Front-end -->
+                    <div class="skill-group reveal">
+                        <h3>Front-end</h3>
+                        <div class="skill-badges">
+                            <span class="badge">React</span>
+                            <span class="badge">Next.js</span>
+                            <span class="badge">Vue.js</span>
+                            <span class="badge">Tailwind CSS</span>
+                            <span class="badge">Redux</span>
+                            <span class="badge">Figma</span>
+                        </div>
+                    </div>
+
+                    <!-- Back-end -->
+                    <div class="skill-group reveal">
+                        <h3>Back-end</h3>
+                        <div class="skill-badges">
+                            <span class="badge">Node.js</span>
+                            <span class="badge">Express</span>
+                            <span class="badge">PostgreSQL</span>
+                            <span class="badge">MongoDB</span>
+                            <span class="badge">REST APIs</span>
+                            <span class="badge">GraphQL</span>
+                        </div>
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="skill-group reveal">
+                        <h3>Tools & Platforms</h3>
+                        <div class="skill-badges">
+                            <span class="badge">Git</span>
+                            <span class="badge">Docker</span>
+                            <span class="badge">GitHub</span>
+                            <span class="badge">Vercel</span>
+                            <span class="badge">AWS</span>
+                            <span class="badge">VS Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects" id="projects">
+            <div class="container">
+                <h2>Featured Projects</h2>
+
+                <div class="projects-grid reveal">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>Analytics Dashboard</h3>
+                            <span class="project-year">2024</span>
+                        </div>
+                        <p class="project-description">
+                            Real-time data visualization dashboard for SaaS analytics.
+                            Features interactive charts, custom reports, and export functionality.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">D3.js</span>
+                            <span class="tag">Node.js</span>
+                        </div>
+                        <div class="project-role">Lead Frontend Developer</div>
+                        <div class="project-links">
+                            <a href="#" class="link-btn">View Demo</a>
+                            <a href="#" class="link-btn">GitHub</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>E-commerce Platform</h3>
+                            <span class="project-year">2023</span>
+                        </div>
+                        <p class="project-description">
+                            Full-stack e-commerce solution with product catalog, cart, checkout,
+                            and admin panel. Integrated payment gateway and inventory management.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Stripe</span>
+                            <span class="tag">Docker</span>
+                        </div>
+                        <div class="project-role">Full-stack Developer</div>
+                        <div class="project-links">
+                            <a href="#" class="link-btn">View Demo</a>
+                            <a href="#" class="link-btn">GitHub</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>SaaS Landing Page</h3>
+                            <span class="project-year">2023</span>
+                        </div>
+                        <p class="project-description">
+                            High-converting landing page for a productivity SaaS tool.
+                            Optimized for SEO, mobile-responsive, and fast page load times.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">Tailwind CSS</span>
+                            <span class="tag">Framer Motion</span>
+                            <span class="tag">SEO</span>
+                        </div>
+                        <div class="project-role">Frontend Developer</div>
+                        <div class="project-links">
+                            <a href="#" class="link-btn">View Demo</a>
+                            <a href="#" class="link-btn">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="experience" id="experience">
+            <div class="container">
+                <h2>Experience</h2>
+
+                <div class="timeline reveal">
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <span class="timeline-year">2023</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Senior Frontend Developer</h3>
+                            <p class="company">Tech Startup Inc. — Vietnam</p>
+                            <p>Led frontend architecture redesign, reducing load time by 60%. Mentored junior developers and established best practices for component development.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <span class="timeline-year">2022</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Full-stack Developer</h3>
+                            <p class="company">Digital Agency — Ho Chi Minh City</p>
+                            <p>Developed 10+ web applications for e-commerce and SaaS clients. Implemented GraphQL APIs and optimized database queries for improved performance.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <span class="timeline-year">2021</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Junior Web Developer</h3>
+                            <p class="company">Web Development Studio — Vietnam</p>
+                            <p>Built responsive websites and web applications using React. Collaborated with designers to implement pixel-perfect UIs and improve user experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="container">
+                <h2>Services</h2>
+
+                <div class="services-grid reveal">
+                    <div class="service-card">
+                        <h3>Landing Pages</h3>
+                        <p class="service-price">Starting at $1,500</p>
+                        <ul class="service-list">
+                            <li>✓ Responsive design</li>
+                            <li>✓ SEO optimized</li>
+                            <li>✓ Fast loading</li>
+                            <li>✓ Contact form</li>
+                            <li>✓ Mobile friendly</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-secondary">Get Started</a>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Web Applications</h3>
+                        <p class="service-price">Starting at $5,000</p>
+                        <ul class="service-list">
+                            <li>✓ Custom functionality</li>
+                            <li>✓ Backend integration</li>
+                            <li>✓ Database design</li>
+                            <li>✓ API development</li>
+                            <li>✓ Authentication</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-secondary">Get Started</a>
+                    </div>
+
+                    <div class="service-card featured">
+                        <h3>Maintenance & Support</h3>
+                        <p class="service-price">$500/month</p>
+                        <ul class="service-list">
+                            <li>✓ Bug fixes</li>
+                            <li>✓ Feature updates</li>
+                            <li>✓ Performance optimization</li>
+                            <li>✓ Security updates</li>
+                            <li>✓ 24/7 support</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Subscribe Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2>Let's Work Together</h2>
+                <p class="contact-subtitle">Have a project in mind? Let's talk about it.</p>
+
+                <div class="contact-wrapper reveal">
+                    <div class="contact-form-container">
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                            <p class="form-note">This is a demo form. Replace with your backend service.</p>
+                        </form>
+                    </div>
+
+                    <div class="contact-info">
+                        <div class="contact-block">
+                            <h3>Quick Contact</h3>
+                            <a href="mailto:hello@example.com" class="contact-link">
+                                hello@example.com
+                            </a>
+                            <p class="contact-subtext">Typically reply within 24 hours</p>
+                        </div>
+
+                        <div class="contact-block">
+                            <h3>Download CV</h3>
+                            <a href="#" class="btn btn-secondary" download>Download CV</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Nguyen Minh. All rights reserved.</p>
+            <a href="#hero" class="back-to-top">↑ Back to top</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
