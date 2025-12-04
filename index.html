@@ -1,60 +1,93 @@
-<!DOCTYPE html>
+<!-- ✅ index.html -->
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyen Minh - Web Developer Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <meta name="description" content="Full-stack web developer. Building performant, clean, and user-centric web applications.">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tran Ngoc Phat — Web Developer Portfolio</title>
+    <meta name="description"
+        content="Full-stack web developer building fast, clean, and user-centric web applications." />
+    <meta name="theme-color" content="#0B1220" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
     <!-- Skip Link for Accessibility -->
     <a href="#main" class="skip-link">Skip to main content</a>
 
+    <!-- Page Loader (0% -> 100%) -->
+    <div class="page-loader" id="pageLoader" role="status" aria-live="polite" aria-label="Loading portfolio">
+        <div class="page-loader__inner">
+            <div class="page-loader__brand">TNP</div>
+
+            <div class="page-loader__percent">
+                <span id="loaderPercent">0</span><span class="page-loader__pct">%</span>
+            </div>
+
+            <div class="page-loader__bar" aria-hidden="true">
+                <div class="page-loader__fill" id="loaderBar"></div>
+            </div>
+
+            <div class="page-loader__hint">Loading portfolio…</div>
+        </div>
+    </div>
+
     <!-- Header (Sticky) -->
     <header class="header">
         <div class="header-container">
-            <a href="#" class="logo">NM</a>
-            <nav class="nav">
+            <a href="#hero" class="logo" aria-label="Go to hero">TNP</a>
+
+            <nav class="nav" aria-label="Primary navigation">
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#experience">Experience</a></li>
+                    <li><a href="#services">Services</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <a href="#contact" class="cta-btn">Hire Me</a>
+
+            <div class="header-actions">
+                <a href="#contact" class="cta-btn">Hire Me</a>
+
+                <!-- Mobile button -->
+                <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </header>
 
     <main id="main">
-        <!-- Hero Section -->
+        <!-- Hero -->
         <section class="hero" id="hero">
-            <div class="hero-container">
+            <!-- Animated background layer -->
+            <div class="hero-bg" aria-hidden="true">
+                <div class="blob blob-1"></div>
+                <div class="blob blob-2"></div>
+                <div class="blob blob-3"></div>
+                <div class="grid-overlay"></div>
+            </div>
+
+            <div class="hero-container container">
                 <div class="hero-content">
-                    <!-- SVG Avatar Placeholder -->
+                    <!-- Avatar -->
                     <div class="avatar">
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#7C5CFF;stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:#2FE6C5;stop-opacity:1" />
-                                </linearGradient>
-                            </defs>
-                            <circle cx="50" cy="50" r="50" fill="url(#avatarGrad)" opacity="0.1"/>
-                            <circle cx="50" cy="35" r="15" fill="#7C5CFF"/>
-                            <ellipse cx="50" cy="70" rx="25" ry="20" fill="#2FE6C5" opacity="0.7"/>
-                        </svg>
+                        <div class="avatar-inner">
+                            <!-- ✅ Đổi src thành link ảnh của bạn: "./assets/avatar.jpg" hoặc URL online -->
+                            <img src="./assets/avata.jpg" alt="Tran Ngoc Phat" loading="lazy" decoding="async" />
+                        </div>
                     </div>
 
                     <h1 class="hero-headline">
-                        Hi, I'm <span class="gradient-text">Tran Ngoc Phat</span><br>
+                        Hi, I’m <span class="gradient-text">Tran Ngoc Phat</span><br />
                         Web Developer
                     </h1>
 
                     <p class="hero-subheadline">
-                        Building fast, clean, and user-centric web applications. <br>
+                        Building fast, clean, and user-centric web applications.<br />
                         Specialized in React, Next.js, and full-stack development.
                     </p>
 
@@ -65,25 +98,31 @@
 
                     <div class="social-links">
                         <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
                             </svg>
                         </a>
+
                         <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/>
-                                <circle cx="4" cy="4" r="2"/>
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
+                                <circle cx="4" cy="4" r="2" />
                             </svg>
                         </a>
+
                         <a href="mailto:hello@example.com" aria-label="Email">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="4" width="20" height="16" rx="2"/>
-                                <path d="m22 7-10 5L2 7"/>
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="2" y="4" width="20" height="16" rx="2" />
+                                <path d="m22 7-10 5L2 7" />
                             </svg>
                         </a>
                     </div>
 
-                    <!-- Tech Stack Pill -->
                     <div class="tech-pill">
                         <span class="tech-label">Tech Stack:</span>
                         <div class="tech-tags">
@@ -93,17 +132,56 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Right side -->
+                <aside class="hero-side reveal" aria-label="Quick highlights">
+                    <div class="terminal-card">
+                        <div class="terminal-top">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="terminal-title">~/portfolio</span>
+                        </div>
+
+                        <pre class="terminal-body"><code>
+<span class="k">const</span> <span class="n">developer</span> = {
+  <span class="k">name</span>: <span class="s">"Tran Ngoc Phat"</span>,
+  <span class="k">focus</span>: [<span class="s">"Performance"</span>, <span class="s">"UI"</span>, <span class="s">"UX"</span>],
+  <span class="k">stack</span>: [<span class="s">"React"</span>, <span class="s">"Next.js"</span>, <span class="s">"Node"</span>],
+  <span class="k">status</span>: <span class="s">"Open to work"</span>
+}
+            </code></pre>
+
+                        <div class="stat-grid">
+                            <div class="stat">
+                                <div class="stat-num">2+</div>
+                                <div class="stat-label">Years</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-num">5+</div>
+                                <div class="stat-label">Projects</div>
+                            </div>
+                            <!-- <div class="stat">
+                                <div class="stat-num">90+</div>
+                                <div class="stat-label">Lighthouse</div>
+                            </div> -->
+                        </div>
+                    </div>
+                </aside>
             </div>
-            <div class="hero-decoration"></div>
+
+            <div class="hero-decoration" aria-hidden="true"></div>
         </section>
 
-        <!-- About Section -->
+        <!-- About -->
         <section class="about" id="about">
             <div class="container">
                 <h2>About Me</h2>
                 <p class="about-text">
-                    I'm a passionate full-stack developer with 4+ years of experience building scalable web applications.
-                    I love working at the intersection of design and code, creating intuitive interfaces backed by robust architecture.
+                    I'm a passionate full-stack developer with 2+ years of experience building scalable web
+                    applications.
+                    I love working at the intersection of design and code, creating intuitive interfaces backed by
+                    robust architecture.
                     When I'm not coding, I'm exploring new technologies and contributing to open-source projects.
                 </p>
 
@@ -113,11 +191,13 @@
                         <h3>Performance</h3>
                         <p>Optimized for speed. Web Vitals matter.</p>
                     </div>
+
                     <div class="highlight-card reveal">
                         <div class="card-icon">🎨</div>
                         <h3>UI/UX Design</h3>
                         <p>Clean interfaces, thoughtful interactions.</p>
                     </div>
+
                     <div class="highlight-card reveal">
                         <div class="card-icon">🤝</div>
                         <h3>Collaboration</h3>
@@ -127,15 +207,15 @@
             </div>
         </section>
 
-        <!-- Skills Section -->
+        <!-- Skills -->
         <section class="skills" id="skills">
             <div class="container">
                 <h2>Skills & Expertise</h2>
 
                 <div class="skills-grid">
-                    <!-- Languages -->
                     <div class="skill-group reveal">
                         <h3>Languages</h3>
+
                         <div class="skill-items">
                             <div class="skill-item">
                                 <span class="skill-name">JavaScript</span>
@@ -144,6 +224,7 @@
                                 </div>
                                 <span class="proficiency-label">Strong</span>
                             </div>
+
                             <div class="skill-item">
                                 <span class="skill-name">TypeScript</span>
                                 <div class="proficiency-bar">
@@ -151,6 +232,7 @@
                                 </div>
                                 <span class="proficiency-label">Strong</span>
                             </div>
+
                             <div class="skill-item">
                                 <span class="skill-name">HTML & CSS</span>
                                 <div class="proficiency-bar">
@@ -161,7 +243,6 @@
                         </div>
                     </div>
 
-                    <!-- Front-end -->
                     <div class="skill-group reveal">
                         <h3>Front-end</h3>
                         <div class="skill-badges">
@@ -169,25 +250,23 @@
                             <span class="badge">Next.js</span>
                             <span class="badge">Vue.js</span>
                             <span class="badge">Tailwind CSS</span>
-                            <span class="badge">Redux</span>
-                            <span class="badge">Figma</span>
+                            <!-- <span class="badge">Redux</span> -->
+                            <!-- <span class="badge">Figma</span> -->
                         </div>
                     </div>
 
-                    <!-- Back-end -->
                     <div class="skill-group reveal">
                         <h3>Back-end</h3>
                         <div class="skill-badges">
                             <span class="badge">Node.js</span>
-                            <span class="badge">Express</span>
-                            <!-- <span class="badge">PostgreSQL</span> -->
+                            <!-- <span class="badge">Express</span> -->
                             <span class="badge">MongoDB</span>
-                            <!-- <span class="badge">REST APIs</span> -->
-                            <span class="badge">JWT Authentication</span>
+                            <!-- <span class="badge">PostgreSQL</span> -->
+                            <span class="badge">JWT Auth</span>
+                            <span class="badge">REST APIs</span>
                         </div>
                     </div>
 
-                    <!-- Tools -->
                     <div class="skill-group reveal">
                         <h3>Tools & Platforms</h3>
                         <div class="skill-badges">
@@ -195,93 +274,55 @@
                             <span class="badge">Docker</span>
                             <span class="badge">GitHub</span>
                             <span class="badge">Vercel</span>
-                            <!-- <span class="badge">AWS</span>
-                            <span class="badge">VS Code</span> -->
+                            <!-- <span class="badge">CI/CD</span> -->
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section class="projects" id="projects">
-            <div class="container">
-                <h2>Featured Projects</h2>
+        <!-- ✅ Projects (RENDER BY JS, scroll-snap + drag + controls) -->
+        <section class="projects" id="projects" aria-labelledby="projectsTitle">
+            <div class="container projects-layout">
+                <!-- Left column like your screenshot -->
+                <header class="projects-head reveal">
+                    <div class="projects-kicker">PROJECTS</div>
+                    <h2 id="projectsTitle">Featured Projects</h2>
+                    <p class="projects-subtitle">
+                        A hand-picked selection of products and experiments I built — scroll through each project.
+                    </p>
 
-                <div class="projects-grid reveal">
-                    <!-- Project 1 -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3>Analytics Dashboard</h3>
-                            <span class="project-year">2024</span>
-                        </div>
-                        <p class="project-description">
-                            Real-time data visualization dashboard for SaaS analytics.
-                            Features interactive charts, custom reports, and export functionality.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">TypeScript</span>
-                            <span class="tag">D3.js</span>
-                            <span class="tag">Node.js</span>
-                        </div>
-                        <div class="project-role">Lead Frontend Developer</div>
-                        <div class="project-links">
-                            <a href="#" class="link-btn">View Demo</a>
-                            <a href="#" class="link-btn">GitHub</a>
-                        </div>
+                    <div class="projects-actions">
+                        <button class="pnav-btn" type="button" id="projectsPrev" aria-controls="projectsViewport"
+                            aria-label="Previous project">
+                            ← Prev
+                        </button>
+                        <button class="pnav-btn" type="button" id="projectsNext" aria-controls="projectsViewport"
+                            aria-label="Next project">
+                            Next →
+                        </button>
                     </div>
 
-                    <!-- Project 2 -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3>E-commerce Platform</h3>
-                            <span class="project-year">2023</span>
-                        </div>
-                        <p class="project-description">
-                            Full-stack e-commerce solution with product catalog, cart, checkout,
-                            and admin panel. Integrated payment gateway and inventory management.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Next.js</span>
-                            <span class="tag">PostgreSQL</span>
-                            <span class="tag">Stripe</span>
-                            <span class="tag">Docker</span>
-                        </div>
-                        <div class="project-role">Full-stack Developer</div>
-                        <div class="project-links">
-                            <a href="#" class="link-btn">View Demo</a>
-                            <a href="#" class="link-btn">GitHub</a>
-                        </div>
+                    <div class="projects-hint">
+                        Tip: Drag / swipe horizontally. Use ← → keys when focused.
+                    </div>
+                </header>
+
+                <!-- Right column -->
+                <div class="projects-rail reveal">
+                    <div class="projects-viewport" id="projectsViewport" tabindex="0" role="region"
+                        aria-roledescription="carousel" aria-label="Featured projects slider">
+                        <div class="projects-track" id="projectsTrack"></div>
                     </div>
 
-                    <!-- Project 3 -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3>SaaS Landing Page</h3>
-                            <span class="project-year">2023</span>
-                        </div>
-                        <p class="project-description">
-                            High-converting landing page for a productivity SaaS tool.
-                            Optimized for SEO, mobile-responsive, and fast page load times.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Next.js</span>
-                            <span class="tag">Tailwind CSS</span>
-                            <span class="tag">Framer Motion</span>
-                            <span class="tag">SEO</span>
-                        </div>
-                        <div class="project-role">Frontend Developer</div>
-                        <div class="project-links">
-                            <a href="#" class="link-btn">View Demo</a>
-                            <a href="#" class="link-btn">GitHub</a>
-                        </div>
+                    <div class="projects-footer">
+                        <div class="projects-dots" id="projectsDots" aria-label="Project dots"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Experience Section -->
+        <!-- Experience -->
         <section class="experience" id="experience">
             <div class="container">
                 <h2>Experience</h2>
@@ -289,41 +330,21 @@
                 <div class="timeline reveal">
                     <div class="timeline-item">
                         <div class="timeline-marker">
-                            <span class="timeline-year">2023</span>
+                            <span class="timeline-year">2024</span>
                         </div>
                         <div class="timeline-content">
-                            <h3>Senior Frontend Developer</h3>
-                            <p class="company">Tech Startup Inc. — Vietnam</p>
-                            <p>Led frontend architecture redesign, reducing load time by 60%. Mentored junior developers and established best practices for component development.</p>
+                            <h3>Intern Frontend Developer</h3>
+                            <p class="company">VIETNAM COMPUTER JONT STOCK COMPANY</p>
+                            <p>Internship at VIETNAM COMPUTER JONT STOCK COMPANY. where I gained hands-on experience in frontend development
+                                and learned best practices for building scalable web applications.</p>
                         </div>
                     </div>
 
-                    <div class="timeline-item">
-                        <div class="timeline-marker">
-                            <span class="timeline-year">2022</span>
-                        </div>
-                        <div class="timeline-content">
-                            <h3>Full-stack Developer</h3>
-                            <p class="company">Digital Agency — Ho Chi Minh City</p>
-                            <p>Developed 10+ web applications for e-commerce and SaaS clients. Implemented GraphQL APIs and optimized database queries for improved performance.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-marker">
-                            <span class="timeline-year">2021</span>
-                        </div>
-                        <div class="timeline-content">
-                            <h3>Junior Web Developer</h3>
-                            <p class="company">Web Development Studio — Vietnam</p>
-                            <p>Built responsive websites and web applications using React. Collaborated with designers to implement pixel-perfect UIs and improve user experience.</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Services Section -->
+        <!-- Services -->
         <section class="services" id="services">
             <div class="container">
                 <h2>Services</h2>
@@ -361,9 +382,9 @@
                         <ul class="service-list">
                             <li>✓ Bug fixes</li>
                             <li>✓ Feature updates</li>
-                            <li>✓ Performance optimization</li>
+                            <li>✓ Performance tuning</li>
                             <li>✓ Security updates</li>
-                            <li>✓ 24/7 support</li>
+                            <li>✓ Priority support</li>
                         </ul>
                         <a href="#contact" class="btn btn-primary">Subscribe Now</a>
                     </div>
@@ -371,23 +392,23 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- Contact -->
         <section class="contact" id="contact">
             <div class="container">
-                <h2>Let's Work Together</h2>
-                <p class="contact-subtitle">Have a project in mind? Let's talk about it.</p>
+                <h2>Let’s Work Together</h2>
+                <p class="contact-subtitle">Have a project in mind? Let’s talk about it.</p>
 
                 <div class="contact-wrapper reveal">
                     <div class="contact-form-container">
                         <form class="contact-form" id="contactForm">
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input type="text" id="name" name="name" required>
+                                <input type="text" id="name" name="name" autocomplete="name" required />
                             </div>
 
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
+                                <input type="email" id="email" name="email" autocomplete="email" required />
                             </div>
 
                             <div class="form-group">
@@ -396,16 +417,14 @@
                             </div>
 
                             <button type="submit" class="btn btn-primary">Send Message</button>
-                            <p class="form-note">This is a demo form. Replace with your backend service.</p>
+                            <!-- <p class="form-note">This is a demo form. Replace with your backend service.</p> -->
                         </form>
                     </div>
 
                     <div class="contact-info">
                         <div class="contact-block">
                             <h3>Quick Contact</h3>
-                            <a href="mailto:hello@example.com" class="contact-link">
-                                hello@example.com
-                            </a>
+                            <a href="mailto:hello@example.com" class="contact-link">tranngocphat1305@gmail.com</a>
                             <p class="contact-subtext">Typically reply within 24 hours</p>
                         </div>
 
@@ -422,11 +441,14 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Nguyen Minh. All rights reserved.</p>
+            <p>&copy; 2025 Tran Ngoc Phat. All rights reserved.</p>
             <a href="#hero" class="back-to-top">↑ Back to top</a>
         </div>
     </footer>
 
+    <!-- GSAP (Hero background animation) -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
