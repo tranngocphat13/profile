@@ -251,8 +251,8 @@ setupMobileMenu();
       role: "Frontend",
       tech: ["HTML", "CSS", "JS"],
       image: "./assets/portfolio.png",
-      liveUrl: "https://example.com/portfolio-builder",
-      githubUrl: "https://github.com/yourname/portfolio-builder"
+      liveUrl: "https://profile-ten-beta-26.vercel.app/",
+      githubUrl: "https://github.com/tranngocphat13/profile"
     }
   ];
 
